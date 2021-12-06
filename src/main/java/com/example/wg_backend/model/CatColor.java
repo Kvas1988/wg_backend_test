@@ -1,8 +1,5 @@
 package com.example.wg_backend.model;
 
-import lombok.Getter;
-
-// https://stackoverflow.com/questions/27804069/hibernate-mapping-between-postgresql-enum-and-java-enum
 public enum CatColor {
     BLACK("black"),
     WHITE("white"),
