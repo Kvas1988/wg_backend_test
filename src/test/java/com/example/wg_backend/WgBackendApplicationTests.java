@@ -10,4 +10,8 @@ class WgBackendApplicationTests {
     void contextLoads() {
     }
 
+    // Junit ??
+    // mockMvc
+    // application.yaml for tests
+
 }
