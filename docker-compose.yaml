@@ -12,7 +12,7 @@ services:
       - db
     environment:
       - SERVER_PORT=8080
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/wg_forge_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/wg_forge_db?stringtype=unspecified
       - SPRING_DATASOURCE_USERNAME=wg_forge
       - SPRING_DATASOURCE_PASSWORD=42a
 
