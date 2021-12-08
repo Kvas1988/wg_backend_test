@@ -1,5 +1,10 @@
 package com.example.wg_backend.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+import java.util.stream.Stream;
+
 public enum CatColor {
     BLACK("black"),
     WHITE("white"),
@@ -14,12 +19,25 @@ public enum CatColor {
         this.color = color;
     }
 
-    public String getColor() {
+    // public String getColor() {
+    //     return this.color;
+    // }
+
+    @Override
+    @JsonValue
+    public String toString() {
         return this.color;
     }
 
-    @Override
-    public String toString() {
-        return this.color;
+    // @JsonCreator
+    public static CatColor fromString(String s) {
+        if (s == null) {
+            return null;
+        }
+
+        return Stream.of(CatColor.values())
+                .filter(en -> en.toString().equals(s))
+                .findFirst()
+                .orElseThrow(IllegalArgumentException::new);
     }
 }

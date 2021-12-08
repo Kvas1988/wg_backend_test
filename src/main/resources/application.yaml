@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:5000}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wg_forge_db?stringtype=unspecified
+    username: wg_forge
+    password: 42a
+
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE

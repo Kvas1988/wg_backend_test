@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Amur",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 20,
+    "whiskersLength": 11
+  },
+  {
+    "name": "Asya",
+    "color": "BLACK",
+    "tailLength": 10,
+    "whiskersLength": 10
+  },
+  {
+    "name": "Cesar",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 18,
+    "whiskersLength": 14
+  },
+  {
+    "name": "Chlo",
+    "color": "BLACK",
+    "tailLength": 14,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Clod",
+    "color": "RED_AND_WHITE",
+    "tailLength": 12,
+    "whiskersLength": 15
+  },
+  {
+    "name": "Dina",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 17,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Flora",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 12,
+    "whiskersLength": 15
+  },
+  {
+    "name": "Foma",
+    "color": "BLACK",
+    "tailLength": 15,
+    "whiskersLength": 18
+  },
+  {
+    "name": "Gass",
+    "color": "RED_AND_WHITE",
+    "tailLength": 15,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Hustav",
+    "color": "RED_AND_WHITE",
+    "tailLength": 12,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Kelly",
+    "color": "RED_AND_WHITE",
+    "tailLength": 26,
+    "whiskersLength": 11
+  },
+  {
+    "name": "Lesya",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 12,
+    "whiskersLength": 15
+  },
+  {
+    "name": "Marfa",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 13,
+    "whiskersLength": 11
+  },
+  {
+    "name": "Nemo",
+    "color": "RED_AND_WHITE",
+    "tailLength": 17,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Neo",
+    "color": "RED",
+    "tailLength": 11,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Nord",
+    "color": "RED_AND_BLACK_AND_WHITE",
+    "tailLength": 19,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Odett",
+    "color": "RED_AND_WHITE",
+    "tailLength": 17,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Ost",
+    "color": "WHITE",
+    "tailLength": 14,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Sam",
+    "color": "BLACK_AND_WHITE",
+    "tailLength": 15,
+    "whiskersLength": 15
+  },
+  {
+    "name": "Shurik",
+    "color": "RED_AND_WHITE",
+    "tailLength": 17,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Snow",
+    "color": "WHITE",
+    "tailLength": 19,
+    "whiskersLength": 14
+  },
+  {
+    "name": "Tara",
+    "color": "RED_AND_WHITE",
+    "tailLength": 17,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Tayson",
+    "color": "RED_AND_WHITE",
+    "tailLength": 18,
+    "whiskersLength": 13
+  },
+  {
+    "name": "Tihon",
+    "color": "RED_AND_WHITE",
+    "tailLength": 15,
+    "whiskersLength": 12
+  },
+  {
+    "name": "Ula",
+    "color": "RED_AND_WHITE",
+    "tailLength": 16,
+    "whiskersLength": 14
+  },
+  {
+    "name": "Vika",
+    "color": "BLACK",
+    "tailLength": 14,
+    "whiskersLength": 10
+  },
+  {
+    "name": "Yasha",
+    "color": "RED_AND_WHITE",
+    "tailLength": 18,
+    "whiskersLength": 12
+  }
+]

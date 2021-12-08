@@ -6,4 +6,7 @@ rebuild-docker:
 build:
 	./mvnw clean package -DskipTests
 
+rebuild-run:
+	./mvnw clean install spring-boot:run
+
 .PHONY: build
