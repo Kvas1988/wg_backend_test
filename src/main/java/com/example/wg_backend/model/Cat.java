@@ -2,17 +2,12 @@ package com.example.wg_backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.vladmihalcea.hibernate.type.basic.PostgreSQLEnumType;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.PostLoad;
 import javax.persistence.PrePersist;
@@ -33,13 +28,10 @@ public class Cat {
     @Column(unique = true, nullable = false)
     private String name;
 
-
-
     // @Enumerated(EnumType.STRING)
     // @Column(columnDefinition = "cat_color")
     // // @Type( type = "pgsql_enum" )
     // private CatColor color;
-
 
     @JsonProperty("tail_length")
     private long tailLength;

@@ -11,10 +11,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 
 @Component
@@ -48,7 +46,7 @@ public class DbInit implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // insertData();
-        logger.info("Inserting data process will be here");
+        insertData();
+        // logger.info("Inserting data process will be here");
     }
 }
