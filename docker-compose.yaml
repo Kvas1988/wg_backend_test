@@ -9,7 +9,8 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       - SERVER_PORT=8080
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/wg_forge_db?stringtype=unspecified
@@ -21,6 +22,25 @@ services:
     container_name: db
     ports:
       - "5432:5432"
-#    environment:
-#      - POSTGRES_USER=wg_forge
-#      - POSTGRES_PASSWORD=42a
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  pyscript:
+    image: "python_to_postgres:latest"
+    build: python/
+    command: python script.py
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB_NAME=wg_forge_db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USERNAME=wg_forge
+      - POSTGRES_PASSWORD=42a
