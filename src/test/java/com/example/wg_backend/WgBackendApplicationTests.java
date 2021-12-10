@@ -86,7 +86,7 @@ class WgBackendApplicationTests {
                 .andReturn()
                 .getResponse();
 
-        assertEquals(422, response.getStatus());
+        assertEquals(400, response.getStatus());
         assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
     }
 
@@ -127,8 +127,8 @@ class WgBackendApplicationTests {
                         post("/cat")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content("  {\n"
-                                        + "    \"name\": \"Kvas\",\n"
-                                        + "    \"color\": \"red & white\",\n"
+                                        + "    \"name\": \"DexterHolland\",\n"
+                                        + "    \"color\": \"white\",\n"
                                         + "    \"tail_length\": -15,\n"
                                         + "    \"whiskers_length\": 12\n"
                                         + "  }")
@@ -136,7 +136,7 @@ class WgBackendApplicationTests {
                 .andReturn()
                 .getResponse();
 
-        assertEquals(422, responsePost1.getStatus());
+        assertEquals(400, responsePost1.getStatus());
 
         // wrong color enum
         MockHttpServletResponse responsePost2 = mockMvc.
@@ -153,7 +153,7 @@ class WgBackendApplicationTests {
                 .andReturn()
                 .getResponse();
 
-        assertEquals(422, responsePost2.getStatus());
+        assertEquals(400, responsePost2.getStatus());
 
         // String in length
         MockHttpServletResponse responsePost3 = mockMvc.
@@ -170,7 +170,7 @@ class WgBackendApplicationTests {
                 .andReturn()
                 .getResponse();
 
-        assertEquals(422, responsePost3.getStatus());
+        assertEquals(400, responsePost3.getStatus());
     }
 
 }

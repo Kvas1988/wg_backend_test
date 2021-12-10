@@ -13,6 +13,9 @@ import javax.persistence.PostLoad;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -26,6 +29,7 @@ public class Cat {
 
     @Id
     @Column(unique = true, nullable = false)
+    @NotNull
     private String name;
 
     // @Enumerated(EnumType.STRING)
@@ -33,9 +37,12 @@ public class Cat {
     // // @Type( type = "pgsql_enum" )
     // private CatColor color;
 
+    @Min(0)
     @JsonProperty("tail_length")
     private long tailLength;
 
+    @NotNull
+    @Min(0)
     @JsonProperty("whiskers_length")
     private long whiskersLength;
 
@@ -46,6 +53,7 @@ public class Cat {
 
     @JsonIgnore
     @Transient
+    // @Valid
     private CatColor colorTransient; // transient
 
     @PostLoad

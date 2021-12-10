@@ -11,13 +11,18 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
+@Validated
 @RestController
 // @RequestMapping("/cats")
 public class CatController {
@@ -33,10 +38,16 @@ public class CatController {
     }
 
     @GetMapping(path = "/cats")
-    public Page<Cat> getAll(@RequestParam(name = "offset", required = false, defaultValue = "0") long offset,
-                            @RequestParam(name = "limit", required = false, defaultValue = "0") long limit,
-                            @RequestParam(name = "attribute", required = false, defaultValue = "name") String sortBy,
-                            @RequestParam(name = "order", required = false, defaultValue = "ASC") Sort.Direction sortDirection) {
+    public Page<Cat> getAll(@RequestParam(name = "offset", required = false, defaultValue = "0")
+                                @Min(0)
+                                long offset,
+                            @RequestParam(name = "limit", required = false, defaultValue = "0")
+                                @Min(1) @Max(2000)
+                                long limit,
+                            @RequestParam(name = "attribute", required = false, defaultValue = "name")
+                                String sortBy,
+                            @RequestParam(name = "order", required = false, defaultValue = "ASC")
+                                Sort.Direction sortDirection) {
 
         OffsetBasedPageRequest pageable = new OffsetBasedPageRequest(offset, limit, sortDirection, sortBy);
         return catRepository.findAll(pageable);
@@ -47,7 +58,8 @@ public class CatController {
     }
 
     @PostMapping(path = "/cat")
-    public void createCat (@RequestBody Cat cat) {
-        catRepository.save(cat);
+    public Cat createCat (@Valid @RequestBody Cat cat) {
+        return catRepository.save(cat);
+
     }
 }
